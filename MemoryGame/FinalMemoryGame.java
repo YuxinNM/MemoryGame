@@ -235,20 +235,10 @@ public class FinalMemoryGame
      * buttonPressedFirst() method will be called when click on one of the tiles
      */
     public void addListenerFirstRound(){
-        tilesArr[0].addActionListener(e -> buttonPressedFirst(0));
-        tilesArr[1].addActionListener(e -> buttonPressedFirst(1));
-        tilesArr[2].addActionListener(e -> buttonPressedFirst(2));
-        tilesArr[3].addActionListener(e -> buttonPressedFirst(3));
-        
-        tilesArr[4].addActionListener(e -> buttonPressedFirst(4));
-        tilesArr[5].addActionListener(e -> buttonPressedFirst(5));
-        tilesArr[6].addActionListener(e -> buttonPressedFirst(6));
-        tilesArr[7].addActionListener(e -> buttonPressedFirst(7));
-        
-        tilesArr[8].addActionListener(e -> buttonPressedFirst(8));
-        tilesArr[9].addActionListener(e -> buttonPressedFirst(9));
-        tilesArr[10].addActionListener(e -> buttonPressedFirst(10));
-        tilesArr[11].addActionListener(e -> buttonPressedFirst(11));
+        for (int i = 0; i < 12; i++) {
+            final int index = i;
+            tilesArr[i].addActionListener(e -> buttonPressedFirst(index));
+        }
     }//addListenerFirstRound() ends
     
     /**
@@ -305,20 +295,10 @@ public class FinalMemoryGame
      * buttonPressedSecond() method will be called when click on one of the tiles
      */
     public void addListenerSecondRound(){
-        tilesArr[12].addActionListener(e -> buttonPressedSecond(12));
-        tilesArr[13].addActionListener(e -> buttonPressedSecond(13));
-        tilesArr[14].addActionListener(e -> buttonPressedSecond(14));
-        tilesArr[15].addActionListener(e -> buttonPressedSecond(15));
-        
-        tilesArr[16].addActionListener(e -> buttonPressedSecond(16));
-        tilesArr[17].addActionListener(e -> buttonPressedSecond(17));
-        tilesArr[18].addActionListener(e -> buttonPressedSecond(18));
-        tilesArr[19].addActionListener(e -> buttonPressedSecond(19));
-        
-        tilesArr[20].addActionListener(e -> buttonPressedSecond(20));
-        tilesArr[21].addActionListener(e -> buttonPressedSecond(21));
-        tilesArr[22].addActionListener(e -> buttonPressedSecond(22));
-        tilesArr[23].addActionListener(e -> buttonPressedSecond(23));
+        for (int i = 12; i < 24; i++) {
+            final int index = i;
+            tilesArr[i].addActionListener(e -> buttonPressedSecond(index));
+        }
     }//addListenerSecondRound() ends
     
     /**
@@ -378,20 +358,10 @@ public class FinalMemoryGame
      * buttonPressedThird() method will be called when click on one of the tiles
      */
     public void addListenerThirdRound(){
-        tilesArr[24].addActionListener(e -> buttonPressedThird(24));
-        tilesArr[25].addActionListener(e -> buttonPressedThird(25));
-        tilesArr[26].addActionListener(e -> buttonPressedThird(26));
-        tilesArr[27].addActionListener(e -> buttonPressedThird(27));
-        
-        tilesArr[28].addActionListener(e -> buttonPressedThird(28));
-        tilesArr[29].addActionListener(e -> buttonPressedThird(29));
-        tilesArr[30].addActionListener(e -> buttonPressedThird(30));
-        tilesArr[31].addActionListener(e -> buttonPressedThird(31));
-
-        tilesArr[32].addActionListener(e -> buttonPressedThird(32));
-        tilesArr[33].addActionListener(e -> buttonPressedThird(33));
-        tilesArr[34].addActionListener(e -> buttonPressedThird(34));
-        tilesArr[35].addActionListener(e -> buttonPressedThird(35));
+        for (int i = 24; i < 36; i++) {
+            final int index = i;
+            tilesArr[i].addActionListener(e -> buttonPressedThird(index));
+        }
     }//addListenerThirdRound() ends
     
     /**
@@ -502,7 +472,7 @@ public class FinalMemoryGame
             }
         }
         if(tilesArr[i].buttonValue==1){
-            tf.setText("Congrats!:)");
+            tf.setText("Congrats:)");
         }
         else{
             tf.setText("Wrong:(");
