@@ -200,7 +200,6 @@ public class GamePanels {
             tf.setText("Wrong:(");
         }
     }//buttonPressed() ends
-
     
     /**
      * Call all the methods needed for the second round
@@ -222,7 +221,6 @@ public class GamePanels {
         
         setTimer("Where is the red tile that says 'hi'?  ", 12, 24, 2);
     }
-
 
     /**
      * Call all the methods needed for the third round
