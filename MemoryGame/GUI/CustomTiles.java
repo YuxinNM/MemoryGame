@@ -2,10 +2,16 @@ package MemoryGame.GUI;
 
 import javax.swing.JPanel;
 import java.awt.*;
+import java.util.Random;
 
-public class CustomTiles extends GamePanels{
+public class CustomTiles {
+    private MemoryGameTiles[] tilesArr;       //Initialize the array that will contain tiles declared from MemoryGameTiles class  
+    private Random random;
 
-    public CustomTiles(int roundNum, JPanel currPanel) {
+    public CustomTiles(int roundNum, JPanel currPanel, MemoryGameTiles[] tilesArr, Random random) {
+        this.tilesArr = tilesArr;
+        this.random = random;
+        
         if (roundNum == 1) {
             addFirstRoundTiles(currPanel);
         } else if (roundNum == 2) {
