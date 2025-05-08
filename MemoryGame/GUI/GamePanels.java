@@ -71,15 +71,9 @@ public class GamePanels {
      */
     public void firstRound(){ //JPanel mainPanel, JPanel theFirstPanel, JPanel topPanel, JPanel midPanel
         mainPanel.add(theFirstPanel, BorderLayout.SOUTH);       //Add the FirstPanel to the bottom part of the mainPanel
-        
         setRounds(topPanel, "First Round   ");                 
-        
-        new CustomTiles(1, theFirstPanel, tilesArr, random);                      
-        
-        setInstruction(topPanel);
-        
-        // new Countdown(topcountdownPanel, midPanel, "Where is the blue tile that says 'blue'?   ", 0, 12, 1);     //Call the Countdown constructor
-         
+        new CustomTiles(1, theFirstPanel, tilesArr, random);                              
+        setInstruction(topPanel);         
         setTimer("Where is the blue tile that says 'blue'?", 0, 12, 1);
 
     }
@@ -208,17 +202,11 @@ public class GamePanels {
      */
     public void secondRound(JPanel mainPanel, JPanel theSecondPanel, JPanel topPanel, JPanel midPanel, JPanel theFirstPanel){
         theFirstPanel.setVisible(false);            //Set theFirstPanel invisible
-    
         timer = new Timer();           //Restart the timer
-        
         setRounds(topPanel, "Second Round   ");
-        
         new CustomTiles(2, theSecondPanel, tilesArr, random);        //Add second round tiles to theSecondPanel
-        
         mainPanel.add(theSecondPanel, BorderLayout.SOUTH);      //Add theSecondPanel to the bottom part of mainPanel 
-        
         setInstruction(topPanel);                   //Change the first question back to instruction
-        
         setTimer("Where is the red tile that says 'hi'?  ", 12, 24, 2);
     }
 
@@ -229,18 +217,11 @@ public class GamePanels {
      */
     public void thirdRound(JPanel mainPanel, JPanel theThirdPanel, JPanel topPanel, JPanel midPanel, JPanel theSecondPanel){
         theSecondPanel.setVisible(false);           //Set theSecondPanel invisible
-        
-        timer=new Timer();                          //Restart the timer
-
+        timer = new Timer();                          //Restart the timer
         setRounds(topPanel, "Third Round   ");
-        
         new CustomTiles(3, theThirdPanel, tilesArr, random);          //Add third round tiles to theThirdPanel
-        
         mainPanel.add(theThirdPanel, BorderLayout.SOUTH);           //Add theThirdPanel to the bottom part of mainPanel 
-        
         setInstruction(topPanel);                   //Change the second question back to instruction
-        
-        // new Countdown(topPanel,midPanel, "Where is the green tile that says 'yellow'?  ", 24, 36, 3);           //Call the Countdown constructor
         setTimer("Where is the green tile that says 'yellow'?  ", 24, 36, 3);
     }
 
