@@ -1,4 +1,4 @@
-package MemoryGame;
+package MemoryGame.GUI;
 
 /**
  * MemoryGameTiles is a class that extends JButton. It is used to create tiles that appear in programs.
@@ -8,9 +8,7 @@ package MemoryGame;
  */
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-public class MemoryGameTiles extends JButton
-{  
+public class MemoryGameTiles extends JButton {  
     public Dimension tileSize=new Dimension(100, 100);        //Initialize tileSize field and set the size needed
     public int buttonValue;                                   //Initialize buttonValue field 
     public Font font=new Font("Arial", Font.BOLD,50);         //Initialize font field and set font
